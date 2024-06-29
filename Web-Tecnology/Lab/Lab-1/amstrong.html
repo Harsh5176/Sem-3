@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = Number(prompt("enter the number"));
+        var b = a;
+        var count = 0;
+        var ans = 1;
+        var sum = 0;
+        while(a!=0){
+            count++;
+            a = Math.floor(a/10);
+        }
+        a = b;
+        for(i = 1 ;  i<=count ; i++ ){
+           let rem = a%10;
+           for(x = 1; x<=count ; x++){
+            ans = ans * rem;
+            console.log(ans);
+           }
+           a = Math.floor(a/10);
+         sum = sum + ans ;
+         ans = 1;
+        }
+        alert(sum);
+
+        if(b == sum){
+            prompt("No is armstrong");
+        }
+        else{
+            prompt("No is not armstrong");
+        }
+
+    </script>
+</body>
+</html>

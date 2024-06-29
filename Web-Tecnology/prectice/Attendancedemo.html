@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            height: 100vh;
+            width: 100%;
+            background-color: #f2fdc5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #content {
+            width: 95%;
+            height: 95%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #display {
+            border: 2px solid black;
+            height: 30px;
+            width: 200px;
+            padding: 5px;
+            font-size: large;
+        }
+        #present{
+            background-color: green;
+            color: whitesmoke;
+            border: 2px solid black;
+            border-radius: 30px;
+            height: 30px;
+            width: 100px;
+        }
+        #absent{
+            background-color: red;
+            border: 2px solid black;
+            border-radius: 30px;
+            height: 30px;
+            width: 100px;
+        }
+        #btn{
+            background-color: yellow;
+            border-radius: 30px;
+            height: 30px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <div id="input">
+            <span id="display">301</span>
+            <button id="present" onclick="present()">Present</button>
+            <button id="absent" onclick="absent()">Absent</button>
+            <button id="btn" onclick="absentstudent()">absentstudent</button>
+        </div>
+    </div>
+
+    <script>
+
+       
+
+        let count = 301;
+        let list = [];
+
+        document.getElementById("display").textContent = count;
+        function present() {
+            count++;
+            document.getElementById('display').innerHTML = count;
+        }
+
+
+        function absent() {
+            count++;
+            document.getElementById('display').innerHTML = count;
+            list.push(count-1);
+        }
+
+        function absentstudent(){
+            for(let i=0;i<list.length;i++){
+                document.write(list[i]);
+                if(i==(list.length)-1){
+                    document.write("");
+                }
+                else{
+                    document.write(",");
+                }
+            }
+        }
+
+
+    </script>
+</body>
+</html>
