@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <table border="1" >
+    <script>
+        
+        product = [{"id":"43378-123","product":"Wine - Trimbach Pinot Blanc","prize":"09"},
+                    {"id":"58930-022","product":"Cheese - Pont Couvert","prize":"5793"},
+                    {"id":"49817-0080","product":"Vaccum Bag - 14x20","prize":"647"},
+                    {"id":"33261-062","product":"Wine - Harrow Estates, Vidal","prize":"1"},
+                    {"id":"55111-198","product":"Pepper - Gypsy Pepper","prize":"192"},
+                    {"id":"13537-431","product":"Wine - Domaine Boyar Royal","prize":"0282"},
+                    {"id":"48951-1161","product":"Tumeric","prize":"2"},
+                    {"id":"64578-0104","product":"Sprouts - Peppercress","prize":"7023"},
+                    {"id":"36987-2403","product":"Sauce - Black Current, Dry Mix","prize":"0"},
+                    {"id":"48951-3156","product":"Pop - Club Soda Can","prize":"3580"}]
+
+                    
+                    for(p of product){
+
+                        
+                            document.write("<tr>")
+                            
+                                document.write("<td>")
+                                document.write(p.id)
+                                document.write("</td>")
+
+                                document.write("<td>")
+                                document.write(p.product)
+                                document.write("</td>")
+
+                                document.write("<td>")
+                                document.write(p.prize)
+                                document.write("</td>")
+
+
+                            document.write("</tr>")    
+                        
+                        
+                    }
+                   
+
+    </script>
+    </table>
+    
+</body>
+</html>

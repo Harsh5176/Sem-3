@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = prompt("enter 2 digit num : ");
+        var rem1, rem2;
+
+        rem1 = a % 10;
+        a = parseInt(a / 10);
+        rem2 = a % 10;
+
+        document.write("saperate num is : " + rem2 + ", ");
+        document.write(rem1 + "<br>");
+        
+        var pw=1;
+        for (let i=1; i<=rem1; i++) {
+            pw=rem2*pw; 
+        }
+        document.write("multiplication is: " + pw);
+    </script>
+</body>
+
+</html>
