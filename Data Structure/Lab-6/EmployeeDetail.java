@@ -24,7 +24,6 @@ class Employee{
         this.Empployee_Designation = Empployee_Designation;
         this.Empolyee_salary = Empolyee_salary;
     }
-
     void displayAccountDetails(){
         System.out.println("Employee's id is :"+Employee_id);
         System.out.println("Employee_name's id is :"+Employee_name);
