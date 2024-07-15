@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DefaultParameter</title>
+</head>
+<body>
+    <script>
+        function Harsh(a=5,b=6){
+            document.write(a+b);
+        }
+        Harsh();
+
+        function Harsh2(a=5,b){
+            
+            if(b===undefined){
+                b=6
+            }
+        }
+        Harsh2()
+    </script>
+</body>
+</html>

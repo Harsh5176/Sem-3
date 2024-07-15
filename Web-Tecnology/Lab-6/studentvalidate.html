@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 350px;
+            width: 100%;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 3px;
+            color: #555;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 6px;
+            box-sizing: border-box;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            transition: border-color 0.3s ease;
+        }
+        .form-group input:focus {
+            border-color: #007bff;
+        }
+        .form-group input[type="submit"],
+        .form-group input[type="reset"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-top: 5px;
+            width: 48%;
+            margin-right: 2%;
+            padding: 10px;
+        }
+        .form-group input[type="reset"] {
+            background-color: #dc3545;
+        }
+        .form-group input[type="submit"]:hover,
+        .form-group input[type="reset"]:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Student Registration Form</h2>
+        <form>
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+             <div class="form-group">
+                <label for="enrollmentNo">Enrollment No</label>
+                <input type="text" id="enrollmentNo" name="enrollmentNo" required>
+            </div>
+            <!--<div class="form-group">
+                <label for="rollNo">Roll No</label>
+                <input type="text" id="rollNo" name="rollNo" required>
+            </div>
+            <div class="form-group">
+                <label for="phoneNo">Phone No</label>
+                <input type="tel" id="phoneNo" name="phoneNo" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </div> -->
+            <div class="form-group">
+                <input type="submit" value="Submit" onclick="vaildate()">
+                <input type="reset" value="Reset">
+            </div>
+        </form>
+        <span id="errmsg"  class="error"></span>
+    </div>
+    
+    <script>
+
+        function vaildate(){
+            console.log("Hellooo")
+        let fullname = document.getElementById("fullName");
+        let enrollmentNo = document.getElementById("enrollmentNo").value;
+    //    let rollNo = document.getElementById("rollNo").value;
+    //    let phoneNo = document.getElementById("phoneNo").value;
+    //    let email = document.getElementById("email").value;
+    //    let password = document.getElementById("password").value;
+    //    let confirmPassword = document.getElementById("confirmPassword").value;
+
+    //    let pass = /['!','@','#','$','%','*','^']{1,}[0-9]{1,}/;
+
+    //    let epattern = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+.[a-z]+$/;
+
+    //    let regexp = new RegExp(pass);
+    //    let regexp2 = new RegExp(epattern);
+
+       if(fullname.value.trim().length<8){
+        alert("MUst be 8 charcters")
+       }
+       else if (enrollmentNo.length!=11){
+        alert("enter 11 digit enrollment no.")
+       }
+    }
+
+    // const form = document.getElementById("id name form");
+    // form.addEventListener('submit',(event)=>{
+    //     event.preventDefault();
+    //     validate aapdu function();
+    // });
+    </script>
+</body>
+</html>
+

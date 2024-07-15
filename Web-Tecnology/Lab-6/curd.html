@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>curd</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 300px;
+    }
+    input[type="text"] {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+    button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+    .items {
+        text-align: left;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <input type="text" id="name" placeholder="Enter name..."/>
+    <span id="errMsg">
+    </span>
+    <button id="add/edit" onclick="add()">Add</button>
+    <div class="items" id="itemList">
+    </div>
+</div>
+
+<script>
+    const btn1 = document.getElementById("add/edit");
+    btn1.innerHTML  = "Add";
+    var array = []
+    var index;
+    
+    // addfunc
+    // get value from input teg 
+    // we can also write like this 
+    // array.push(document.getElementById("name").value);
+    // after add name we have to blank input area so we can enter new name 
+    function add(){
+        var name = document.getElementById("name");
+        
+        if(name.value==""){
+            name.style.border = "2px solid red"
+            document.getElementById('errMsg').innerHTML = "Please Enter Name"
+        }
+        else{
+                if (btn1.innerHTML == "Add"){
+                array.push(document.getElementById("name").value);
+                document.getElementById("name").value= "";
+            display();
+            }
+            else{
+                let name = document.getElementById("name");
+                array[index] = name.value;
+                document.getElementById("name").value= "";
+                display();
+                btn1.innerHTML = "Add";
+        }
+        }
+    }
+
+
+    function edit(i){
+        let name = document.getElementById("name");
+        name.value = array[i];
+        btn1.innerHTML  = "Edit";
+        index = i;
+       }
+       function del(i){
+        array.splice(i,1);
+        display();
+       }
+
+
+    function dispaly(){
+         // get place where you want to display data
+        let display = document.getElementById("itemList");
+
+        // before the display null the old valuses for display
+        // we use the innerHTML because display tag(div) is
+        // not self closeing teg 
+        display.innerHTML="";
+
+        for(let i=0; i<array.length ;i++){
+            display.innerHTML += array[i] +
+                "             "+
+                "<button onclick='del("+i+")'>Delete</button>" + 
+                "             "+
+                "<button onclick='edit("+i+")'>Edit</button>"+
+                "</br>";
+            }
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VariableScope</title>
+</head>
+<body>
+    <script>
+        H=10;
+        abc();
+        console.log("out of the Function after calling it:"+H);
+        function abc(){
+           var H=20;
+           if(true){
+            let H=30;
+            console.log("into if block:"+H);
+           }
+           console.log("into function block:"+H);
+        }
+    </script>
+</body>
+</html>

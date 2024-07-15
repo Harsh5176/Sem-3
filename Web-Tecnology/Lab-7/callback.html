@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       function addtion(a,b){
+        let c=a+b;
+        display(c);
+       }
+       function subtract(a,b){
+        let c=a-b;
+        display(c);
+       }
+    
+       function multy(a,b){
+        let c=a*b;
+        display(c);
+       }
+       function divide(a,b){
+        let c=a/b;
+        display(c);
+       }
+
+       function operate(callback){
+        let n1 = parseInt(prompt("Enter first number :"));
+        let n2 = parseInt(prompt("Enter second number :"));
+        callback(n1,n2)
+       }
+        
+       operate(subtract);
+
+       function display(c){
+        document.write(c);
+       }
+
+    </script>
+</body>
+</html>

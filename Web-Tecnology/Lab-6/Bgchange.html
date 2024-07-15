@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background-Change</title>
+
+    <style>
+        #div1{
+            height: 50px;width: 70px;
+            background-color: #5D0E41;
+            color: #828080;
+        }
+    </style>
+</head>
+<body>
+   <div id="div1">Harsh</div>
+   <button onclick="changeColor()">Change colour</button>
+    <script>
+        function changeColor(){
+            document.getElementById("div1").style.backgroundColor="#00224D";
+            document.getElementById("div1").innerHTML="Harsh Vekariya"
+        }
+    </script>
+</body>
+</html>

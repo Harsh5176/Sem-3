@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse-events</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+         body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 95%;
+            gap:20px;
+            
+        }
+        #main{
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+            border: 5px solid black;
+        }
+        button {
+            font-family: 'Times New Roman', Times, serif;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        button:active{
+            border: 3px solid red;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="main"></div>
+
+    <button onkeydown="changecolor()">onkeydown</button>
+    <button onkeypress="changecolor()">onkeypress</button>
+    <button onkeyup="changecolor()">onkeyup</button>
+    
+    
+    
+    <script>
+        function changecolor(){
+             
+             r =  Math.floor(Math.random()*255)
+             g =  Math.floor(Math.random()*255)
+             b =  Math.floor(Math.random()*255)
+             document.getElementById('main').style.background = "rgb("+r+","+g+","+b+")"
+         }
+    </script>
+</body>
+</html>
